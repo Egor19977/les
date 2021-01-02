@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 0;
+}
+body{
+    justify-content: center;
+    align-items: center;
+    background: rgb(83, 117, 74);
+    position: absolute;
+}
+.container{
+    position: absolute;
+    width: 1000px;
+    height: 650px;
+    background: rgb(0, 0, 0);
+    margin-left: 250PX;
+}
+.container .clip{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.container .clip.clip1{
+    clip-path: polygon(0 0, 45% 0, 20% 100%, 0% 100%);
+    background:url(5.jpg);
+    background-size: cover;
+}
+.container .clip.clip2{
+    clip-path: polygon(45% 0, 65% 0, 80% 100%, 20% 100%);
+    background: url(2.jpg);
+    background-size: cover;
+}
+.container .clip.clip3{
+    clip-path: polygon(65% 0, 100% 0, 100% 100%, 80% 100%);
+    background: url(100.jpg);
+    background-size: cover;
+}
+.container:hover .clip{
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+.container .clip:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.container .clip .content {
+    position: relative;
+    margin-top: 500px;
+    margin-left: 30px;
+    width:300px;
+    height: 150px;
+    color: #fff;
+    opacity: 0;
+    transition: 0;
+}
+.container .clip3 .content{
+    position: relative;
+    margin-top: 170px;
+    margin-left: 550px;
+}
+.container .clip2 .content{
+    position: relative;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.container .clip1 .content{
+    position: relative;
+    margin-top: 400px;
+    margin-left: 50px;
+    width: 850px;
+    height: 500px;
+}
+.container .clip:hover .content{
+    bottom: 0;
+    opacity: 1;
+}
+/*videp*/
+.home{
+    width: 100vw;
+    height: 100vh;
+    background: url(22.jpg) center/cover no-repeat;
+    overflow: hidden;
+    position: relative;
+}
+.home_video{
+    padding-bottom: 56.25%;
+}
+.home video{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+}
+.home_content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+hr{
+    background-color: black;
+    border: black;
+}
